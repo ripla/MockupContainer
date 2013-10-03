@@ -83,7 +83,7 @@ public class MockupContainerDemoUI extends UI {
         Object captionPropertyId = mockupContainer.getContainerPropertyIds()
                 .iterator().next();
 
-        Panel tablePanel = new Panel("Table (Vaadin 7.0 RC2)");
+        Panel tablePanel = new Panel("Table");
         VerticalLayout tablePanelContent = new VerticalLayout();
         tablePanel.setContent(tablePanelContent);
         tablePanel.setSizeUndefined();
@@ -94,7 +94,7 @@ public class MockupContainerDemoUI extends UI {
         table.setSelectable(true);
         tablePanelContent.addComponent(table);
 
-        Panel treePanel = new Panel("Tree (Vaadin 7.0 RC2)");
+        Panel treePanel = new Panel("Tree");
         VerticalLayout treePanelContent = new VerticalLayout();
         treePanel.setContent(treePanelContent);
         treePanel.setSizeUndefined();
@@ -114,7 +114,7 @@ public class MockupContainerDemoUI extends UI {
         // millerColumns.setItemCaptionPropertyId(captionPropertyId);
         // millerPanel.addComponent(millerColumns);
 
-        Panel treeTablePanel = new Panel("TreeTable Vaadin 7.0 RC2");
+        Panel treeTablePanel = new Panel("TreeTable");
         VerticalLayout treeTablePanelContent = new VerticalLayout();
         treeTablePanel.setContent(treeTablePanelContent);
         treeTablePanel.setSizeUndefined();
@@ -230,6 +230,7 @@ public class MockupContainerDemoUI extends UI {
 
         Panel topPanel = new Panel("MockupContainer properties");
         VerticalLayout topPanelContent = new VerticalLayout();
+        topPanelContent.setMargin(true);
         topPanel.setContent(topPanelContent);
         topPanel.setSizeUndefined();
 
@@ -249,18 +250,10 @@ public class MockupContainerDemoUI extends UI {
         mainLayout.addComponent(millerPanel);
         mainLayout.addComponent(treeTablePanel);
 
-        // ((AbstractOrderedLayout) getMainWindow().getContent())
-        // .setComponentAlignment(topPanel, Alignment.TOP_CENTER);
-        // ((AbstractOrderedLayout) getMainWindow().getContent())
-        // .setComponentAlignment(tablePanel, Alignment.TOP_CENTER);
-        // ((AbstractOrderedLayout) getMainWindow().getContent())
-        // .setComponentAlignment(treePanel, Alignment.TOP_CENTER);
-        // ((AbstractOrderedLayout) getMainWindow().getContent())
-        // .setComponentAlignment(treeTablePanel, Alignment.TOP_CENTER);
     }
 
     private TextField createIntegerField(String caption, String value) {
-        final TextField field = new TextField("Property count");
+        final TextField field = new TextField(caption);
         field.setConverter(Integer.class);
         field.setConversionError("Integers only");
         field.setValue(value);
