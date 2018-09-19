@@ -1,4 +1,7 @@
-#MockupContainer
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/mockupcontainer)
+[![Stars on Vaadin Directory](https://img.shields.io/vaadin-directory/star/mockupcontainer.svg)](https://vaadin.com/directory/component/mockupcontainer)
+
+# MockupContainer
 
 MockupContainer is a container that implements Container.Indexed and Container.Hierarchical and is intended for testing Vaadin components. The contents of the container are automatically generated. 
 
